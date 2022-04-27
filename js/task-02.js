@@ -14,3 +14,5 @@ const arrayOfListElements = ingredients.map(ingredient => {
   listItemEl.textContent = ingredient;
   return listItemEl;
 });
+
+document.querySelector('#ingredients').append(...arrayOfListElements);
