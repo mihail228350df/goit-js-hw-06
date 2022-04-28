@@ -1,4 +1,4 @@
- const ingredients = [
+const ingredients = [
   'Potatoes',
   'Mushrooms',
   'Garlic',
@@ -7,12 +7,16 @@
   'Condiments',
 ];
 
+const ingredientsListRef = document.querySelector('#ingredients');
 
-const arrayOfListElements = ingredients.map(ingredient => {
-  const listItemEl = document.createElement('li');
-  listItemEl.classList.add('item');
-  listItemEl.textContent = ingredient;
-  return listItemEl;
-});
+const makeIngredientEl = (ingredient) => {
+  const ingredientsListItemRef = document.createElement('li');
+  
+  ingredientsListItemRef.textContent = ingredient; 
+  ingredientsListItemRef.classList.add('item');
+  return ingredientsListItemRef;
+};
 
-document.querySelector('#ingredients').append(...arrayOfListElements);
+const ingredientsList = ingredients.map(ingredient=>makeIngredientEl(ingredient));
+
+ingredientsListRef.append(...ingredientsList);
