@@ -5,9 +5,9 @@ const arrayOfCategories = document
 console.log('Number Of Categories:', arrayOfCategories.length);
 
 arrayOfCategories.forEach(listItem => {
-  console.log('Category:', listItem.firstElementChild.textContent);
+  console.log('Category:', listItem.lastElementChild.textContent);
   console.log(
     'Elements:',
-    listItem.firstElementChild.nextElementSibling.querySelectorAll('li').length,
+    listItem.lastElementChild.nextElementSibling.querySelectorAll('li').length,
   );
 });
