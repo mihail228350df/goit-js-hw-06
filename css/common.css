@@ -24,21 +24,28 @@ button {
 }
 
 
-.gallery {
+.gallery{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
-  padding: 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items:center;
+  padding-left: 0;
 }
-
-.gallery__item {
-  flex-basis: calc((100% - 3 * 20px) / 3);
-  margin-left: 10px;
-  margin-right: 10px;
+.gallery li {
   list-style: none;
+  width: calc(33.33% - 30px);
 }
 
-.image {
-  display: block;
-  max-width: 100%;
+.gallery img {
+width: 100%;
+display: block;
+/* height: 100%; */
+/* flex-shrink: 1; */
+}
+
+.a{
+  width: 30px;
+  height: 30px;
+  background-color: black;
 }

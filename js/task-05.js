@@ -1,8 +1,11 @@
-const inputEl = document.querySelector('#name-input');
-const titleEl = document.querySelector('#name-output');
+const input = document.querySelector('#name-input');
+const output = document.querySelector('#name-output');
 
-inputEl.addEventListener('input', event => {
-  titleEl.textContent = event.currentTarget.value
-    ? event.currentTarget.value
-    : 'Anonymous';
-});
+input.addEventListener('input', () =>  {
+    if (input.value.length!=0){
+    output.textContent=input.value}
+    else {
+        output.textContent='Anonymous'
+ } 
+  }
+ )

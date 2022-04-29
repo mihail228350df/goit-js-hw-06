@@ -1,24 +1,15 @@
-const refs = {
-  decrementBtn: document.querySelector('[data-action="decrement"]'),
-  incrementBtb: document.querySelector('[data-action="increment"]'),
-  valueEl: document.querySelector('#value'),
-};
+const decrButton = document.querySelector('button[data-action = "decrement"]');
+const incrButton = document.querySelector('button[data-action = "increment"]');
+const value = document.querySelector('#value');
 
 let counterValue = 0;
 
-refs.decrementBtn.addEventListener('click', decrement);
-refs.incrementBtb.addEventListener('click', increment);
+decrButton.addEventListener('click', () => {
+    counterValue -= 1;
+    value.textContent = counterValue;
+});
 
-function decrement() {
-  counterValue -= 1;
-  changeValueEl(counterValue);
-}
-
-function increment() {
-  counterValue += 1;
-  changeValueEl(counterValue);
-}
-
-function changeValueEl(value) {
-  refs.valueEl.textContent = value;
-}
+incrButton.addEventListener('click', () => {
+    counterValue += 1;
+    value.textContent = counterValue;
+});
